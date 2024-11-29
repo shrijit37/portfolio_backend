@@ -28,7 +28,11 @@ export const addNewProject = catchAsyncErrors(async (req, res, next) => {
   ) {
     return next(new ErrorHandler("Please Provide All Details!", 400));
   }
+
+
+  
   const cloudinaryResponse = await cloudinary.uploader.upload(
+    
     projectBanner.tempFilePath,
     { folder: "PORTFOLIO PROJECT IMAGES" }
   );
@@ -39,6 +43,8 @@ export const addNewProject = catchAsyncErrors(async (req, res, next) => {
     );
     return next(new ErrorHandler("Failed to upload avatar to Cloudinary", 500));
   }
+
+
   const project = await Project.create({
     title,
     description,
