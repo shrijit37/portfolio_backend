@@ -17,7 +17,7 @@ const app = express();
 dotenv.config({ path: "./config/config.env" });
 
 const corsOptions = {
-  origin: ['https://shrijit.netlify.app'],
+  origin: ['https://shrijit.netlify.app','https://shrijit-dashboard.netlify.app'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
