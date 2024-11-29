@@ -103,7 +103,7 @@ export const updateProfile = catchAsyncErrors(async (req, res, next) => {
     githubURL: req.body.githubURL,
     instagramURL: req.body.instagramURL,
     twitterURL: req.body.twitterURL,
-    linkedInURL: req.body.linkedInURL,
+    linkedInURL: req.body.linkedInURL,  
   };
 
   const user = await User.findByIdAndUpdate(req.user.id, newUserData, {
